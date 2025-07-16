@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/ftot dull-cortada200.ico" type="image/x-icon">
+    <title>Tio Vargas - Loja Online</title>
+    <style>
+        
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #38b6ff 0%, rgba(56, 182, 255, 0.8) 100%);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #38b6ff;
+        }
+        
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #38b6ff;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-black text-white py-2 px-4 text-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <!--<span class="hidden md:inline-block mr-4"><i class="fas fa-phone-alt mr-1"></i> (69) 8125-2095</span> -->
+                <span class="hidden md:inline-block"><i class="fas fa-envelope mr-1"></i> <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" rel="nofollow">contato@tiovargas.com.br</a></span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-blue-400 transition" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400 transition" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-400 transition" target="_blank" rel="nofollow"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2" ><img src="images/logo.jpg" alt="Logo TV"></div>
+                <h1 class="text-2xl font-bold text-black">Tio <span class="text-blue-500">Vargas</span></h1>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 mx-8">
+                <div class="relative w-full max-w-xl">
+                    <input type="text" placeholder="O que você está procurando?" class="w-full py-2 px-4 border border-gray-300 rounded-l-full focus:outline-none focus:border-blue-500">
+                    <button class="bg-blue-500 text-white py-2 px-6 rounded-r-full hover:bg-blue-600 transition">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- User Actions -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-700 hover:text-blue-500 transition relative">
+                    <i class="fas fa-user text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-blue-500 transition relative">
+                    <i class="fas fa-heart text-xl"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-blue-500 transition relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="cart-badge">5</span>
+                </a>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Search -->
+        <div class="md:hidden px-4 pb-4">
+            <div class="relative">
+                <input type="text" placeholder="O que você está procurando?" class="w-full py-2 px-4 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500">
+                <button class="absolute right-3 top-2 text-gray-500">
+                   <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="hidden md:block bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4">
+                <ul class="flex space-x-6 py-3">
+                    <li><a href="#" class="text-black hover:text-blue-500 font-medium transition">Home</a></li>
+                    <li><a href="#" class="text-black hover:text-blue-500 font-medium transition">Produtos</a></li>
+                    <li><a href="/ofertas.html" class="text-black hover:text-blue-500 font-medium transition">Ofertas</a></li>
+                    <li><a href="#" class="text-black hover:text-blue-500 font-medium transition">Novidades</a></li>
+                    <li><a href="#" class="text-black hover:text-blue-500 font-medium transition">Sobre Nós</a></li>
+                    <li><a href="#" class="text-black hover:text-blue-500 font-medium transition">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">As melhores ofertas você encontra aqui!</h2>
+                <p class="text-xl mb-6">Produtos de qualidade com preços que cabem no seu bolso.</p>
+                <button class="bg-white text-blue-500 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition">
+                    Compre Agora <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="images/hero_banner.webp" alt="Banner promocional da loja Tio Vargas com diversos produtos" class="rounded-lg shadow-xl w-full max-w-md" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Nossas Categorias</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#" class="bg-gray-100 rounded-lg p-4 flex flex-col items-center hover:bg-blue-50 transition">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-2">
+                        <i class="fas fa-tshirt text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Roupas</span>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 flex flex-col items-center hover:bg-blue-50 transition">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-2">
+                        <i class="fas fa-laptop text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Eletrônicos</span>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 flex flex-col items-center hover:bg-blue-50 transition">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-2">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Casa</span>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 flex flex-col items-center hover:bg-blue-50 transition">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-2">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Cozinha</span>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 flex flex-col items-center hover:bg-blue-50 transition">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-2">
+                        <i class="fas fa-gamepad text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Games</span>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 flex flex-col items-center hover:bg-blue-50 transition">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-2">
+                        <i class="fas fa-headphones text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Acessórios</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Produtos em Destaque</h2>
+                <a href="#" class="text-blue-500 font-medium hover:underline">Ver todos</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_camiseta.webp" alt="Camiseta Premium azul marinho" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-20%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Camiseta Premium</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(128)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">R$ 89,90</span>
+                                <p class="text-blue-500 font-bold text-xl">R$ 71,90</p>
+                            </div>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_fone_bluetooth.webp" alt="Fone de ouvido Bluetooth preto com estojo" class="w-full h-64 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Fone Bluetooth</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(256)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-blue-500 font-bold text-xl">R$ 129,90</p>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_smartwatch.webp" alt="Smartwatch moderno com tela de atividade física" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">Novo</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Smartwatch</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(89)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-blue-500 font-bold text-xl">R$ 249,90</p>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_mochila.webp" alt="Mochila executiva preta moderna" class="w-full h-64 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Mochila Executiva</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(312)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-blue-500 font-bold text-xl">R$ 99,90</p>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-blue-500 rounded-xl p-8 text-white flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Frete Grátis em compras acima de R$ 150</h3>
+                    <p class="opacity-90">Aproveite essa promoção por tempo limitado!</p>
+                </div>
+                <button class="bg-white text-blue-500 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition whitespace-nowrap">
+                    Compre Agora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Novidades</h2>
+                <a href="#" class="text-blue-500 font-medium hover:underline">Ver todos</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_panelas.webp" alt="Conjunto de panelas antiaderentes de aço inoxidável" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">Novo</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Conjunto de Panelas</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(42)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-blue-500 font-bold text-xl">R$ 199,90</p>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_tenis.webp" alt="Tênis esportivo azul e laranja" class="w-full h-64 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Tênis Esportivo</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(178)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-blue-500 font-bold text-xl">R$ 159,90</p>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_camera.webp" alt="Câmera digital compacta prata" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">Novo</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Câmera Digital</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(64)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-blue-500 font-bold text-xl">R$ 899,90</p>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                    <div class="relative">
+                        <img src="images/produto_perfume.webp" alt="Frasco de perfume importado elegante" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-15%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Perfume Importado</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(93)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">R$ 129,90</span>
+                                <p class="text-blue-500 font-bold text-xl">R$ 109,90</p>
+                            </div>
+                            <button class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">O que nossos clientes dizem</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Comprei um smartphone na Tio Vargas e fiquei impressionado com a qualidade do atendimento e a rapidez na entrega. O produto chegou antes do prazo e estava perfeito!"</p>
+                    <div class="flex items-center">
+                        <img src="images/cliente_carlos.webp" alt="Foto do cliente Carlos Silva" class="w-10 h-10 rounded-full mr-3" loading="lazy">
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <p class="text-gray-500 text-sm">São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Adorei minha compra na Tio Vargas! Os preços são ótimos e a variedade de produtos é incrível. Já indiquei para várias amigas e todas ficaram satisfeitas."</p>
+                    <div class="flex items-center">
+                        <img src="images/cliente_ana.webp" alt="Foto da cliente Ana Oliveira" class="w-10 h-10 rounded-full mr-3" loading="lazy">
+                        <div>
+                            <h4 class="font-bold">Ana Oliveira</h4>
+                            <p class="text-gray-500 text-sm">Rio de Janeiro, RJ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Sempre compro na Tio Vargas porque sei que posso confiar. Já tive um problema com uma entrega e o atendimento foi excelente, resolveram tudo rapidamente."</p>
+                    <div class="flex items-center">
+                        <img src="images/cliente_roberto.webp" alt="Foto do cliente Roberto Santos" class="w-10 h-10 rounded-full mr-3" loading="lazy">
+                        <div>
+                            <h4 class="font-bold">Roberto Santos</h4>
+                            <p class="text-gray-500 text-sm">Belo Horizonte, MG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-blue-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-2">Receba nossas ofertas</h2>
+            <p class="text-xl mb-6 max-w-2xl mx-auto">Cadastre-se e receba as melhores promoções diretamente no seu e-mail.</p>
+            
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Seu melhor e-mail" class="flex-1 py-3 px-4 rounded-l-full newsletter-input text-black">
+                <button class="bg-black text-white py-3 px-6 rounded-r-full hover:bg-gray-800 transition">
+                    Cadastrar <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+            
+            <div class="flex justify-center mt-6 space-x-4">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <span>Sem spam</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <span>Promoções exclusivas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2">TV</div>
+                        <h3 class="text-xl font-bold">Tio <span class="text-blue-500">Vargas</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">A melhor loja online com os melhores preços e produtos de qualidade para você.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Contato</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Atendimento</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Central de Ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Rastrear Pedido</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Devoluções</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Formas de Pagamento</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">Av. Paulista, 1000 - São Paulo, SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">(11) 1234-5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">contato@tiovargas.com.br</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">Seg-Sex: 9h-18h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Tio Vargas. Todos os direitos reservados.</p>
+                <div class="flex space-x-4">
+                    <img src="images/pagamento_visa.webp" alt="Logo Visa" class="h-8" loading="lazy">
+                    <img src="images/pagamento_mastercard.webp" alt="Logo Mastercard" class="h-8" loading="lazy">
+                    <img src="images/pagamento_boleto.webp" alt="Logo Boleto Bancário" class="h-8" loading="lazy">
+                    <img src="images/pagamento_pix.webp" alt="Logo Pix" class="h-8" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Simple cart counter (just for demo)
+        document.querySelectorAll('.fa-shopping-cart').forEach(icon => {
+            icon.addEventListener('click', (e) => {
+                e.preventDefault();
+                const badge = document.querySelector('.cart-badge');
+                let count = parseInt(badge.textContent);
+                badge.textContent = count + 1;
+                
+                // Show a simple notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed top-20 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg animate-fade-in-out';
+                notification.textContent = 'Produto adicionado ao carrinho!';
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('opacity-0', 'transition', 'duration-500');
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 500);
+                }, 2000);
+            });
+        });
+    </script>
+    <script>
+        //window.alert('Bem-vindo ao Tio Vargas! Navegue e aproveite nossas ofertas incríveis!')
+       // window.confirm('Você gostaria de receber notificações sobre promoções?')
+        //window.prompt('Qual é o seu nome?')
+    </script>
+</body>
+</html>
